@@ -1,0 +1,39 @@
+@startuml 
+left to right direction
+actor 生徒 as g
+actor 教師 as c
+actor 学生課 as k
+
+package ユニバ {
+    usecase "シラバス閲覧" as UC100  
+    usecase "履修登録" as UC101
+    usecase "成績確認" as UC102
+    usecase "時間割確認" as UC103
+    usecase "成績入力?" as UC104
+}
+
+package えるキャン {
+  usecase "アンケート回答" as UC1
+  usecase "課題アップロード" as UC2
+  usecase "課題ダウンロード" as UC3
+  usecase "お知らせ閲覧" as UC4
+  usecase "お知らせ掲示" as UC5
+
+}
+g --> UC101
+g --> UC102
+g --> UC100
+k --> UC104
+g --> UC103
+g --> UC1
+c --> UC2
+g --> UC3
+k --> UC5
+c --> UC5
+g --> UC4
+g --> UC100
+
+
+
+
+@enduml
