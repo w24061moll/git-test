@@ -1,0 +1,11 @@
+@startuml
+participant main_function as Foo
+participant calculate as Foo1
+participant getinput as Foo2
+
+Foo --> Foo1: データを計算
+Foo1 --> Foo2: 入力データ要求
+Foo2 --> Foo1: 入力データ
+Foo1 --> Foo: 計算結果
+Foo --> Foo: 表示
+@enduml
