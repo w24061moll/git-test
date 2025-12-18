@@ -1,0 +1,9 @@
+@startuml
+hide empty description
+[*] --> off 
+off --> on: スイッチおす
+on --> off: 一定時間後
+off --> on: 暗くなる
+on --> off: スイッチおす
+on --> off: 明るくなる
+@enduml
