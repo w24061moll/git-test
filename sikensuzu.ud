@@ -1,0 +1,10 @@
+@startuml
+participant クライアント as Foo
+participant サーバー as Foo1
+database データベース as Foo2
+
+Foo --> Foo1: データを要求
+Foo1 --> Foo2: データベースを問い合わせ
+Foo2 --> Foo1: データベース結果を送る
+Foo1 --> Foo: 取得したデータを返す
+@enduml
